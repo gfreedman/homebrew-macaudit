@@ -3,8 +3,8 @@ class Macaudit < Formula
 
   desc "Mac System Health Inspector & Auditor"
   homepage "https://github.com/gfreedman/mac_audit"
-  url "https://github.com/gfreedman/mac_audit/archive/refs/tags/v1.4.2.tar.gz"
-  sha256 "eda20b480979e57eda7e2b7951b1eb792621ede757e2abce3c6d1d3e22a434e2"
+  url "https://github.com/gfreedman/mac_audit/archive/refs/tags/v1.5.0.tar.gz"
+  sha256 "b9b934b398237b87282c9df8ffef7111d3f3eaf95f6e0a462c56474b46ac66f9"
   license "MIT"
   head "https://github.com/gfreedman/mac_audit.git", branch: "main"
 
