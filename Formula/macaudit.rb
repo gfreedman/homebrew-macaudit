@@ -3,8 +3,8 @@ class Macaudit < Formula
 
   desc "Mac System Health Inspector & Auditor"
   homepage "https://github.com/gfreedman/mac_audit"
-  url "https://github.com/gfreedman/mac_audit/archive/refs/tags/v1.6.0.tar.gz"
-  sha256 "8cd9e10d0cf05bc45b1df978e69b5fb59154e1b5265d73ce365be8c1125f0270"
+  url "https://github.com/gfreedman/mac_audit/archive/refs/tags/v1.7.0.tar.gz"
+  sha256 "4124968da7350ff97d7f2e6d5b97f15157be0dd2e7fd9e78759723ffad9ab937"
   license "MIT"
   head "https://github.com/gfreedman/mac_audit.git", branch: "main"
 
@@ -15,9 +15,9 @@ class Macaudit < Formula
     sha256 "12ff4785d337a1bb490bb7e9c2b1ee5da3112e94a8622f26a6c77f5d2fc6842a"
   end
 
-  resource "rich" do
-    url "https://files.pythonhosted.org/packages/74/99/a4cab2acbb884f80e558b0771e97e21e939c5dfb460f488d19df485e8298/rich-14.3.2.tar.gz"
-    sha256 "e712f11c1a562a11843306f5ed999475f09ac31ffb64281f73ab29ffdda8b3b8"
+  resource "markdown-it-py" do
+    url "https://files.pythonhosted.org/packages/5b/f5/4ec618ed16cc4f8fb3b701563655a69816155e79e24a17b651541804721d/markdown_it_py-4.0.0.tar.gz"
+    sha256 "cb0a2b4aa34f932c007117b194e945bd74e0ec24133ceb5bac59009cda1cb9f3"
   end
 
   resource "pygments" do
@@ -25,26 +25,15 @@ class Macaudit < Formula
     sha256 "636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"
   end
 
-  resource "markdown-it-py" do
-    url "https://files.pythonhosted.org/packages/5b/f5/4ec618ed16cc4f8fb3b701563655a69816155e79e24a17b651541804721d/markdown_it_py-4.0.0.tar.gz"
-    sha256 "cb0a2b4aa34f932c007117b194e945bd74e0ec24133ceb5bac59009cda1cb9f3"
-  end
-
-  resource "mdurl" do
-    url "https://files.pythonhosted.org/packages/d6/54/cfe61301667036ec958cb99bd3efefba235e65cdeb9c84d24a8293ba1d90/mdurl-0.1.2.tar.gz"
-    sha256 "bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"
+  resource "rich" do
+    url "https://files.pythonhosted.org/packages/b3/c6/f3b320c27991c46f43ee9d856302c70dc2d0fb2dba4842ff739d5f46b393/rich-14.3.3.tar.gz"
+    sha256 "b8daa0b9e4eef54dd8cf7c86c03713f53241884e814f4e2f5fb342fe520f639b"
   end
 
   resource "simple-term-menu" do
     url "https://files.pythonhosted.org/packages/d8/80/f0f10b4045628645a841d3d98b584a8699005ee03a211fc7c45f6c6f0e99/simple_term_menu-1.6.6.tar.gz"
     sha256 "9813d36f5749d62d200a5599b1ec88469c71378312adc084c00c00bfbb383893"
   end
-
-  resource "wcwidth" do
-    url "https://files.pythonhosted.org/packages/35/a2/8e3becb46433538a38726c948d3399905a4c7cabd0df578ede5dc51f0ec2/wcwidth-0.6.0.tar.gz"
-    sha256 "cdc4e4262d6ef9a1a57e018384cbeb1208d8abbc64176027e2c2455c81313159"
-  end
-
   def install
     virtualenv_install_with_resources
   end
@@ -62,6 +51,6 @@ class Macaudit < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/macaudit --version")
+    assert_match version.to_s, shell_output("\#{bin}/macaudit --version")
   end
 end
