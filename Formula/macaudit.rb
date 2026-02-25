@@ -3,8 +3,8 @@ class Macaudit < Formula
 
   desc "Mac System Health Inspector & Auditor"
   homepage "https://github.com/gfreedman/mac_audit"
-  url "https://github.com/gfreedman/mac_audit/archive/refs/tags/v1.5.2.tar.gz"
-  sha256 "6fc0d8c804d4863ea2800ec0972ed86f441af9600ee57083275de1adbd5f45a9"
+  url "https://github.com/gfreedman/mac_audit/archive/refs/tags/v1.6.0.tar.gz"
+  sha256 "8cd9e10d0cf05bc45b1df978e69b5fb59154e1b5265d73ce365be8c1125f0270"
   license "MIT"
   head "https://github.com/gfreedman/mac_audit.git", branch: "main"
 
@@ -33,6 +33,11 @@ class Macaudit < Formula
   resource "mdurl" do
     url "https://files.pythonhosted.org/packages/d6/54/cfe61301667036ec958cb99bd3efefba235e65cdeb9c84d24a8293ba1d90/mdurl-0.1.2.tar.gz"
     sha256 "bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"
+  end
+
+  resource "simple-term-menu" do
+    url "https://files.pythonhosted.org/packages/d8/80/f0f10b4045628645a841d3d98b584a8699005ee03a211fc7c45f6c6f0e99/simple_term_menu-1.6.6.tar.gz"
+    sha256 "9813d36f5749d62d200a5599b1ec88469c71378312adc084c00c00bfbb383893"
   end
 
   resource "wcwidth" do
