@@ -40,14 +40,14 @@ class Macaudit < Formula
   homepage "https://github.com/gfreedman/mac_audit" # Project's website, shown by `brew home macaudit`
 
   # The URL where Homebrew downloads the source code for this specific release.
-  # This points to a .tar.gz archive (a compressed folder) of the v1.12.1 tag on GitHub.
-  url "https://github.com/gfreedman/mac_audit/archive/refs/tags/v1.12.1.tar.gz"
+  # This points to a .tar.gz archive (a compressed folder) of the v1.12.2 tag on GitHub.
+  url "https://github.com/gfreedman/mac_audit/archive/refs/tags/v1.12.2.tar.gz"
 
   # A SHA-256 cryptographic checksum of the downloaded file.
   # After downloading, Homebrew hashes the file and compares it to this value.
   # If they don't match, the download is rejected — this protects against
   # corrupted downloads or tampered files (supply-chain security).
-  sha256 "64f8d9de2ddaea3d113d0599d2df207b54509f1e9c811345e49d6ed3e2a67ddc"
+  sha256 "f2d6c3bee9c53b295c43670be4ead77005f98e8d2d2e62e91443bfa911e14229"
 
   license "MIT" # The open-source license under which macaudit is distributed
 
@@ -164,10 +164,10 @@ class Macaudit < Formula
   # `brew test macaudit`. It verifies the installation worked correctly.
   #
   # Here we run `macaudit --version` in a shell and check that its output
-  # contains the expected version string (e.g. "1.12.1").
+  # contains the expected version string (e.g. "1.12.2").
   #
   # `version.to_s` converts the Homebrew version object to a plain string like
-  # "1.12.1". `shell_output` runs the command and returns its stdout as a string.
+  # "1.12.2". `shell_output` runs the command and returns its stdout as a string.
   # `assert_match` fails the test if the version string isn't found in the output.
   test do
     assert_match version.to_s, shell_output("\#{bin}/macaudit --version")
